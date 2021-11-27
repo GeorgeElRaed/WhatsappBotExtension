@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "name": "Whatsapp Bot",
+    "description": "Whatsapp Chat Bot",
+    "version": "1.0",
+    "icons": {
+        "16": "/images/whatsapp_16.png",
+        "48": "/images/whatsapp_32.png",
+        "128": "/images/whatsapp_128.png"
+    },
+    "permissions": [
+        "tabs"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://web.whatsapp.com/"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "matches": [
+                "https://web.whatsapp.com/*"
+            ],
+            "resources": [
+                "*.js",
+                "/src/*"
+            ]
+        }
+    ]
+}
